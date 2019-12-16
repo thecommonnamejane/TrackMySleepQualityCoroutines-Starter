@@ -1,0 +1,4 @@
+#Mon Dec 16 09:33:01 SGT 2019
+base.0=C\:\\Users\\TARUC\\Desktop\\TrackMySleepQualityCoroutines-Starter\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex
