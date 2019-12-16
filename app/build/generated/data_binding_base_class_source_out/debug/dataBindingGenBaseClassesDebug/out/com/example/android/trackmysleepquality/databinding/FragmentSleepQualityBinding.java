@@ -7,9 +7,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.example.android.trackmysleepquality.sleepquality.SleepQualityViewModel;
 
 public abstract class FragmentSleepQualityBinding extends ViewDataBinding {
   @NonNull
@@ -33,6 +35,9 @@ public abstract class FragmentSleepQualityBinding extends ViewDataBinding {
   @NonNull
   public final TextView titleText;
 
+  @Bindable
+  protected SleepQualityViewModel mSleepQualityViewModel;
+
   protected FragmentSleepQualityBinding(DataBindingComponent _bindingComponent, View _root,
       int _localFieldCount, ImageView qualityFiveImage, ImageView qualityFourImage,
       ImageView qualityOneImage, ImageView qualityThreeImage, ImageView qualityTwoImage,
@@ -45,6 +50,13 @@ public abstract class FragmentSleepQualityBinding extends ViewDataBinding {
     this.qualityTwoImage = qualityTwoImage;
     this.qualityZeroImage = qualityZeroImage;
     this.titleText = titleText;
+  }
+
+  public abstract void setSleepQualityViewModel(@Nullable SleepQualityViewModel sleepQualityViewModel);
+
+  @Nullable
+  public SleepQualityViewModel getSleepQualityViewModel() {
+    return mSleepQualityViewModel;
   }
 
   @NonNull
